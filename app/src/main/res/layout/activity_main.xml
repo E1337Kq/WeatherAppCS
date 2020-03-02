@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:background="#90e466"
+    tools:context=".MainActivity">
+
+
+    <GridLayout
+        android:useDefaultMargins="true"
+        android:id="@+id/mainGrid1"
+        android:columnCount="1"
+        android:rowCount="1"
+        android:alignmentMode="alignMargins"
+        android:columnOrderPreserved="false"
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="16dp">
+
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#EB6E24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@drawable/plaza">
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:ems="10"
+                    android:textAlignment="center"
+                    android:gravity="center_vertical"
+                    android:textColor="@android:color/white"
+                    android:background="#EB6E24"
+                    android:textSize="24sp"/>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            app:cardBackgroundColor="#EB6E24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            app:cardCornerRadius="15dp">
+
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/editText"
+                    android:layout_width="300dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:layout_gravity="center"
+                    android:onClick="search"
+                    android:text="Click me to get data from beach"
+                    android:inputType="textPersonName"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_bias="0.466"
+                    app:layout_constraintEnd_toEndOf="@id/editText"
+                    app:layout_constraintStart_toStartOf="@id/editText"
+                    app:layout_constraintTop_toTopOf="@id/editText"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/reserve"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:text="There are 45/100 free spots \n RESERVE YOUR NOW"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintEnd_toEndOf="@id/mainGrid1"
+                app:layout_constraintStart_toStartOf="@id/mainGrid1"
+                app:layout_constraintTop_toTopOf="@id/mainGrid1"/>
+
+            <Button
+                android:id="@+id/dial"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/custom_button"
+                android:textAllCaps="false"
+                android:text="DIAL"
+                android:textColor="@android:color/white"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                android:onClick="onDialButton"
+                />
+
+            <TextView
+                android:id="@+id/reserved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:layout_gravity="center"
+                android:text="Available also on Viber and Skype"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:layout_constraintHorizontal_bias="0.466"
+                app:layout_constraintEnd_toEndOf="@id/dial"
+                app:layout_constraintStart_toStartOf="@id/dial"
+                app:layout_constraintTop_toTopOf="@id/dial"/>
+
+        </LinearLayout>
+    </GridLayout>
+
+
+</ScrollView>

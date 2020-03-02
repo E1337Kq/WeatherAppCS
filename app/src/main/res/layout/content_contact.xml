@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Contact"
+    tools:showIn="@layout/activity_contact"
+    android:background="#90e466"
+    android:orientation="vertical"
+    app:borderWidth="0dp"
+    app:elevation="6dp"    >
+
+    <EditText
+        android:id="@+id/mailID"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="25sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email adress">
+    </EditText>
+    <TextView
+        android:id="@+id/subjectID"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
+        android:text="WWW.UDGMETEO.ME/ Contact mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        >
+    </TextView>
+    <TextView
+        android:id="@+id/messageID"
+        android:layout_marginTop="150dp"
+        android:text="Hi there,\n\n thank you for your interest. In order to speed up our communication, please reply this mail with next informations:\n\n Your name:\n Your mobile phone: \n Time when you are free for call:\n\n And our agent will contact you soon as possible.\n\n With respect,\n\n www.udgmeteo.me TEAM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible">
+    </TextView>
+
+</LinearLayout>
